@@ -148,9 +148,13 @@
                                     <constraint firstAttribute="width" constant="200" id="RD5-UU-fcI"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBY-bB-hoY">
-                                <rect key="frame" x="795" y="704" width="209" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBY-bB-hoY" customClass="WhiteRoundedCornerButton" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="774" y="698" width="230" height="60"/>
                                 <color key="backgroundColor" red="0.82352948189999997" green="0.30196079609999998" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="MtK-kz-3ob"/>
+                                    <constraint firstAttribute="height" constant="60" id="Sv3-Zd-HNG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Start Meeting">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

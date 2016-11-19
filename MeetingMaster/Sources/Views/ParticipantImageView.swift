@@ -31,7 +31,7 @@ class ParticipantImageView: DesignableImageView {
 
     override func applyStyling() {
         layer.cornerRadius = frame.size.width / 2
-        layer.borderWidth = 4
+        layer.borderWidth = 2
         layer.masksToBounds = true
         layer.borderColor = UIColor.red.cgColor
     }

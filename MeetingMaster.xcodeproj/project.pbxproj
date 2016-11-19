@@ -64,6 +64,7 @@
 		25F6CE2B1DE0B9C90072B37C /* MeetingBeganEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE2A1DE0B9C90072B37C /* MeetingBeganEvent.swift */; };
 		25F6CE2D1DE0BFC90072B37C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE2C1DE0BFC90072B37C /* GradientView.swift */; };
 		25F6CE2F1DE0C8A80072B37C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE2E1DE0C8A80072B37C /* CircleView.swift */; };
+		25F6CE311DE105210072B37C /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE301DE105210072B37C /* RoundedCornerButton.swift */; };
 		FCFD91EE74D173D2DDD22D0F /* Pods_MeetingMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		25F6CE2A1DE0B9C90072B37C /* MeetingBeganEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingBeganEvent.swift; sourceTree = "<group>"; };
 		25F6CE2C1DE0BFC90072B37C /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		25F6CE2E1DE0C8A80072B37C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		25F6CE301DE105210072B37C /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetingMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A23D94F2DCE51389128829 /* Pods-MeetingMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetingMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB88CA1BA21481829836BE9 /* Pods-MeetingMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetingMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster.release.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				25F6CE281DE0B7360072B37C /* ParticipantLeftView.swift */,
 				25F6CE2C1DE0BFC90072B37C /* GradientView.swift */,
 				25F6CE2E1DE0C8A80072B37C /* CircleView.swift */,
+				25F6CE301DE105210072B37C /* RoundedCornerButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				25F6CDC61DE0687F0072B37C /* JourneysService.swift in Sources */,
 				25F6CE011DE06ED30072B37C /* DesignableTableViewCell.swift in Sources */,
 				25F6CE001DE06ED30072B37C /* DesignableControl.swift in Sources */,
+				25F6CE311DE105210072B37C /* RoundedCornerButton.swift in Sources */,
 				25F6CDD91DE06C290072B37C /* DuringViewController.swift in Sources */,
 				25F6CDC41DE0687F0072B37C /* Result.swift in Sources */,
 				25F6CE0F1DE07E7C0072B37C /* ParticipantTableViewCell.swift in Sources */,

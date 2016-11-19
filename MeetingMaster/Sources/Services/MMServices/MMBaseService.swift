@@ -25,7 +25,7 @@ struct MMBaseService: BaseService {
 
         let fileMgr = FileManager.default
         let dirPaths = fileMgr.urls(for: .documentDirectory, in: .userDomainMask)
-        let soundFileURL = dirPaths[0].appendingPathComponent("sound.wav")
+        let soundFileURL = dirPaths[0].appendingPathComponent("sound")
         //let dada = try! Data(contentsOf: soundFileURL)
 
 
