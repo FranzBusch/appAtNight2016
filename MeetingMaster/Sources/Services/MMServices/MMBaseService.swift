@@ -26,10 +26,10 @@ struct MMBaseService: BaseService {
         let fileMgr = FileManager.default
         let dirPaths = fileMgr.urls(for: .documentDirectory, in: .userDomainMask)
         let soundFileURL = dirPaths[0].appendingPathComponent("sound.wav")
-        let dada = try! Data(contentsOf: soundFileURL)
+        //let dada = try! Data(contentsOf: soundFileURL)
 
 
-        Alamofire.SessionManager.default.upload(dada, to: url)
+        Alamofire.SessionManager.default.upload(soundFileURL, to: url)
     }
 
 }
