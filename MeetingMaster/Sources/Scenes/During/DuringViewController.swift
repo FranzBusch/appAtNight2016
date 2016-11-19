@@ -22,12 +22,13 @@ class DuringViewController: UIViewController, AVAudioRecorderDelegate {
         
         let dirPaths = fileMgr.urls(for: .documentDirectory, in: .userDomainMask)
         
-        let soundFileURL = dirPaths[0].appendingPathComponent("sound.wav")
+        let soundFileURL = dirPaths[0].appendingPathComponent("sound")
         
         let recordSettings =
             [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
              AVEncoderBitRateKey: 16,
              AVNumberOfChannelsKey: 2,
+             AVFormatIDKey: kAudioFormatLinearPCM,
              AVSampleRateKey: 44100.0] as [String : Any]
         
         let audioSession = AVAudioSession.sharedInstance()
