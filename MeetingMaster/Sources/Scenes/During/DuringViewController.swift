@@ -17,7 +17,7 @@ class DuringViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startRecording()
         let fileMgr = FileManager.default
         
         let dirPaths = fileMgr.urls(for: .documentDirectory, in: .userDomainMask)
@@ -64,5 +64,10 @@ class DuringViewController: UIViewController, AVAudioRecorderDelegate {
         } catch let error as NSError {
             print("audioPlayer error: \(error.localizedDescription)")
         }
+    }
+    func startRecording(){
+        print("Audio record")
+        audioRecorder?.record()
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(stopRecording), userInfo: nil, repeats: false)
     }
 }
