@@ -1,11 +1,36 @@
 import Foundation
 
-protocol MMBaseTarget { }
+enum MMBaseTarget: TargetType {
+    case fetchMeeting
+    case sensorData(Int)
 
-extension MMBaseTarget {
 
     var baseURL: URL {
-        return URL(string: "")!  // swiftlint:disable:this force_unwrapping
+        return URL(string: "http://hackathonnoderedapp.eu-gb.mybluemix.net")!  // swiftlint:disable:this force_unwrapping
+    }
+
+    var path: String {
+        switch self {
+        case .fetchMeeting:
+            return "meetings"
+        case let .sensorData(id):
+            return "meetings/\(id)/sensordata"
+        }
+    }
+
+    var method: HTTPMethod {
+        switch self {
+        case .fetchMeeting, .sensorData:
+            return .get
+        }
+    }
+
+    var encoding: ParameterEncoding {
+        return .json
+    }
+
+    var parameters: [String : Any]? {
+        return nil
     }
 
     var httpHeaderFields: [String: String]? {
