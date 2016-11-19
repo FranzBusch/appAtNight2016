@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--During-->
+        <scene sceneID="pgI-Sm-KZk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="During" id="XKG-0p-fc4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wB-NV-sDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="-620"/>
+        </scene>
         <!--Pre View Controller-->
         <scene sceneID="q2q-Xx-mKX">
             <objects>
@@ -17,13 +25,13 @@
                         <viewControllerLayoutGuide type="top" id="O3j-0l-mGa"/>
                         <viewControllerLayoutGuide type="bottom" id="Zo8-ch-3Zd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FkL-eU-fnp">
+                    <view key="view" contentMode="scaleToFill" id="FkL-eU-fnp" customClass="StartGradientView" customModule="MeetingMaster" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-Kt-ict">
-                                <rect key="frame" x="0.0" y="20" width="250" height="748"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="170" width="250" height="598"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="pAP-z8-qGy"/>
                                 </constraints>
@@ -50,19 +58,19 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="President" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dg-Gu-Ap2">
                                                     <rect key="frame" x="85" y="39.5" width="65.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fonlad Trump" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0O-WP-Q5F">
                                                     <rect key="frame" x="85" y="15.5" width="105.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdm-5u-IXN">
                                                     <rect key="frame" x="85" y="60" width="41.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -89,16 +97,102 @@
                                     <outlet property="dataSource" destination="mR3-xX-GzZ" id="YaJ-Wn-eyl"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tk-1C-dE6" customClass="CurrentParticipantsView" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="500" y="170" width="274" height="448"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciY-D5-bEq" customClass="ParticipantLeftView" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="290" y="224" width="200" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="041-Ff-9Z5"/>
+                                    <constraint firstAttribute="height" constant="80" id="Po4-KT-yWS"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O19-3l-5T1" customClass="ParticipantLeftView" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="290" y="354" width="200" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Onz-KS-2kj"/>
+                                    <constraint firstAttribute="width" constant="200" id="USk-Kx-anB"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Umg-sS-06t" customClass="ParticipantLeftView" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="290" y="484" width="200" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="acf-gl-1bU"/>
+                                    <constraint firstAttribute="width" constant="200" id="yCy-SJ-dzQ"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwP-7I-RhW" customClass="ParticipantView" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="784" y="224" width="200" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="D5T-mg-ig2"/>
+                                    <constraint firstAttribute="height" constant="80" id="KiY-S6-PHa"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mq2-8g-aK7" customClass="ParticipantView" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="784" y="354" width="200" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Df7-FH-IIS"/>
+                                    <constraint firstAttribute="height" constant="80" id="YqQ-E2-qBx"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-i1-DgF" customClass="ParticipantView" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="784" y="484" width="200" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="27g-GL-kAt"/>
+                                    <constraint firstAttribute="width" constant="200" id="RD5-UU-fcI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBY-bB-hoY">
+                                <rect key="frame" x="795" y="704" width="209" height="54"/>
+                                <color key="backgroundColor" red="0.82352948189999997" green="0.30196079609999998" blue="0.34117648010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Start Meeting">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XKG-0p-fc4" kind="show" id="ddK-Ys-R6x"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8nI-Kt-ict" firstAttribute="top" secondItem="O3j-0l-mGa" secondAttribute="bottom" id="JMv-qJ-1j5"/>
+                            <constraint firstItem="Umg-sS-06t" firstAttribute="top" secondItem="O19-3l-5T1" secondAttribute="bottom" constant="50" id="3op-Qg-BiV"/>
+                            <constraint firstItem="2tk-1C-dE6" firstAttribute="leading" secondItem="8nI-Kt-ict" secondAttribute="trailing" constant="250" id="8fH-q1-U2Q"/>
+                            <constraint firstItem="Mq2-8g-aK7" firstAttribute="centerY" secondItem="2tk-1C-dE6" secondAttribute="centerY" id="AL3-gX-8sN"/>
+                            <constraint firstItem="Mq2-8g-aK7" firstAttribute="top" secondItem="xwP-7I-RhW" secondAttribute="bottom" constant="50" id="CMc-vB-1eQ"/>
+                            <constraint firstItem="Zo8-ch-3Zd" firstAttribute="top" secondItem="YBY-bB-hoY" secondAttribute="bottom" constant="10" id="DSG-lf-sNQ"/>
+                            <constraint firstItem="2tk-1C-dE6" firstAttribute="leading" secondItem="O19-3l-5T1" secondAttribute="trailing" constant="10" id="FIJ-Uh-EJ1"/>
+                            <constraint firstItem="SaT-i1-DgF" firstAttribute="top" secondItem="Mq2-8g-aK7" secondAttribute="bottom" constant="50" id="GbL-pt-hr2"/>
+                            <constraint firstAttribute="trailing" secondItem="2tk-1C-dE6" secondAttribute="trailing" constant="250" id="LUr-y0-V8k"/>
+                            <constraint firstAttribute="trailing" secondItem="YBY-bB-hoY" secondAttribute="trailing" constant="20" id="Mxt-tv-GCW"/>
+                            <constraint firstItem="O19-3l-5T1" firstAttribute="centerY" secondItem="2tk-1C-dE6" secondAttribute="centerY" id="Ugw-7K-eyK"/>
+                            <constraint firstItem="O19-3l-5T1" firstAttribute="trailing" secondItem="Umg-sS-06t" secondAttribute="trailing" id="XkJ-Q0-mdC"/>
+                            <constraint firstItem="SaT-i1-DgF" firstAttribute="leading" secondItem="Mq2-8g-aK7" secondAttribute="leading" id="YUQ-fy-DEw"/>
+                            <constraint firstItem="Zo8-ch-3Zd" firstAttribute="top" secondItem="2tk-1C-dE6" secondAttribute="bottom" constant="150" id="b32-jB-07v"/>
+                            <constraint firstItem="ciY-D5-bEq" firstAttribute="trailing" secondItem="O19-3l-5T1" secondAttribute="trailing" id="bxz-ga-nuy"/>
+                            <constraint firstItem="xwP-7I-RhW" firstAttribute="leading" secondItem="Mq2-8g-aK7" secondAttribute="leading" id="dEa-fJ-5aw"/>
                             <constraint firstItem="Zo8-ch-3Zd" firstAttribute="top" secondItem="8nI-Kt-ict" secondAttribute="bottom" id="gr7-F1-0rv"/>
+                            <constraint firstItem="8nI-Kt-ict" firstAttribute="top" secondItem="2tk-1C-dE6" secondAttribute="top" id="j9e-xD-Ehz"/>
+                            <constraint firstItem="Mq2-8g-aK7" firstAttribute="leading" secondItem="2tk-1C-dE6" secondAttribute="trailing" constant="10" id="l9T-Kf-vWZ"/>
                             <constraint firstItem="8nI-Kt-ict" firstAttribute="leading" secondItem="FkL-eU-fnp" secondAttribute="leading" id="rrM-J1-m0o"/>
+                            <constraint firstItem="2tk-1C-dE6" firstAttribute="top" secondItem="O3j-0l-mGa" secondAttribute="bottom" constant="150" id="xLR-GD-5bb"/>
+                            <constraint firstItem="O19-3l-5T1" firstAttribute="top" secondItem="ciY-D5-bEq" secondAttribute="bottom" constant="50" id="yP9-pq-VSR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="8nI-Kt-ict" id="xHO-jf-2S8"/>
+                        <outletCollection property="participantViews" destination="ciY-D5-bEq" collectionClass="NSMutableArray" id="P71-gv-vvR"/>
+                        <outletCollection property="participantViews" destination="O19-3l-5T1" collectionClass="NSMutableArray" id="qBi-pb-8gM"/>
+                        <outletCollection property="participantViews" destination="Umg-sS-06t" collectionClass="NSMutableArray" id="fjn-o5-Oep"/>
+                        <outletCollection property="participantViews" destination="xwP-7I-RhW" collectionClass="NSMutableArray" id="wnE-y9-qfw"/>
+                        <outletCollection property="participantViews" destination="Mq2-8g-aK7" collectionClass="NSMutableArray" id="zjt-qw-1gC"/>
+                        <outletCollection property="participantViews" destination="SaT-i1-DgF" collectionClass="NSMutableArray" id="tZ3-TU-Mjt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFC-n5-6YU" userLabel="First Responder" sceneMemberID="firstResponder"/>

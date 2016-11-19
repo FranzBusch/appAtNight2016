@@ -8,22 +8,30 @@
 
 import Gloss
 
+enum ParticipantStatus: String {
+    case accepted = "Accepted"
+    case declined = "Denied"
+}
+
 class Participant: Decodable {
 
     let name: String
     var eta: TimeInterval
     let job: String
+    let status: ParticipantStatus
 
     required init?(json: JSON) {
         guard let name: String = "name" <~~ json,
             let eta: TimeInterval = "eta" <~~ json,
-            let job: String = "jobtitle" <~~ json else {
+            let job: String = "jobtitle" <~~ json,
+            let status: ParticipantStatus = "status" <~~ json else {
                 return nil
         }
 
         self.name = name
         self.eta = eta
         self.job = job
+        self.status = status
     }
 
 }

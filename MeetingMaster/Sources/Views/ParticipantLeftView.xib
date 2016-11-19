@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParticipantLeftView" customModule="MeetingMaster" customModuleProvider="target">
+            <connections>
+                <outlet property="jobLabel" destination="JiH-v5-coV" id="sCk-Ri-ctH"/>
+                <outlet property="nameLabel" destination="BdX-yq-FwK" id="6By-XV-x5C"/>
+                <outlet property="participantImageView" destination="Uxg-3k-sxb" id="Hvk-uF-Fkz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdX-yq-FwK">
+                    <rect key="frame" x="243" y="298.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiH-v5-coV">
+                    <rect key="frame" x="247.5" y="322.5" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-3k-sxb" customClass="ParticipantImageView" customModule="MeetingMaster" customModuleProvider="target">
+                    <rect key="frame" x="295" y="293.5" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Df0-wa-UBF"/>
+                        <constraint firstAttribute="width" secondItem="Uxg-3k-sxb" secondAttribute="height" multiplier="1:1" id="SbX-uX-kJu"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="JiH-v5-coV" firstAttribute="top" secondItem="BdX-yq-FwK" secondAttribute="bottom" constant="3" id="7AZ-NR-E6T"/>
+                <constraint firstItem="Uxg-3k-sxb" firstAttribute="leading" secondItem="BdX-yq-FwK" secondAttribute="trailing" constant="10" id="FCz-4H-Rda"/>
+                <constraint firstItem="JiH-v5-coV" firstAttribute="trailing" secondItem="BdX-yq-FwK" secondAttribute="trailing" id="KBe-hW-JGy"/>
+                <constraint firstItem="BdX-yq-FwK" firstAttribute="top" secondItem="Uxg-3k-sxb" secondAttribute="top" constant="5" id="MKp-Fv-obF"/>
+                <constraint firstAttribute="trailing" secondItem="Uxg-3k-sxb" secondAttribute="trailing" id="OJl-Bg-diF"/>
+                <constraint firstItem="Uxg-3k-sxb" firstAttribute="width" secondItem="Uxg-3k-sxb" secondAttribute="height" multiplier="1:1" id="XeX-de-jdf"/>
+                <constraint firstItem="Uxg-3k-sxb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aa9-hu-mvD"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

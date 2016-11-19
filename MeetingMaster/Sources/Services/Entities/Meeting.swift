@@ -8,6 +8,7 @@
 
 import Gloss
 
+
 class Meeting: Decodable {
 
     let participants: [Participant]
@@ -24,6 +25,14 @@ class Meeting: Decodable {
         self.participants = participants
         self.room = room
         self.name = name
+    }
+
+    var presentParticipants: [Participant] {
+        return participants.filter { $0.eta == 0 }
+    }
+
+    var travellingParticipants: [Participant] {
+        return participants.filter { $0.eta != 0 }
     }
 
 }

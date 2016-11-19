@@ -26,21 +26,31 @@ class MeetingController {
             guard let meeting = result.value else { return }
 
             self.currentMeeting = meeting
-            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: self.tick)
+            self.timer = Timer(timeInterval: 1 ,
+                                 target: self,
+                                 selector: #selector(self.tick),
+                                 userInfo: nil,
+                                 repeats: true)
+
+            RunLoop.main.add(self.timer, forMode: .commonModes)
             EventBus<MeetingUpdatedEvent>.post(MeetingUpdatedEvent())
         }
     }
 
-    func tick(_ timer: Timer) {
+    @objc func tick(_ timer: Timer) {
         currentMeeting?.participants.forEach { participant in
-            participant.eta = max(participant.eta - 1, 0)
+            if participant.status == .accepted {
+                participant.eta = max(participant.eta - 1, 0)
+            }
         }
 
         EventBus<MeetingUpdatedEvent>.post(MeetingUpdatedEvent())
 
-//        if !(currentMeeting?.participants.contains { $0.eta != 0 } ?? true) {
-//            timer.invalidate()
-//        }
+        if !(currentMeeting?.participants.contains { $0.eta != 0 && $0.status == .accepted } ?? true) {
+            timer.invalidate()
+            EventBus<MeetingBeganEvent>.post(MeetingBeganEvent())
+        }
+
     }
 
 }
