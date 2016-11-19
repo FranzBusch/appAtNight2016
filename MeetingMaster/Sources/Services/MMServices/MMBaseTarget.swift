@@ -3,6 +3,7 @@ import Foundation
 enum MMBaseTarget: TargetType {
     case fetchMeeting
     case sensorData(Int)
+    case uploadWav
 
 
     var baseURL: URL {
@@ -15,6 +16,8 @@ enum MMBaseTarget: TargetType {
             return "meetings"
         case let .sensorData(id):
             return "meetings/\(id)/sensordata"
+        case .uploadWav:
+            return "uploadWav"
         }
     }
 
@@ -22,6 +25,8 @@ enum MMBaseTarget: TargetType {
         switch self {
         case .fetchMeeting, .sensorData:
             return .get
+        case .uploadWav:
+            return .post
         }
     }
 

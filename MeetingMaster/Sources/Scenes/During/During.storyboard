@@ -9,23 +9,108 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--During View Controller-->
         <scene sceneID="g8d-l8-n2m">
             <objects>
-                <viewController id="IMY-Yf-Rom" sceneMemberID="viewController">
+                <viewController id="IMY-Yf-Rom" customClass="DuringViewController" customModule="MeetingMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RCQ-k7-Yty"/>
                         <viewControllerLayoutGuide type="bottom" id="plt-KO-xs5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Znb-eN-k5i">
+                    <view key="view" contentMode="scaleToFill" id="Znb-eN-k5i" customClass="StartGradientView" customModule="MeetingMaster" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZL-wS-UwA">
+                                <rect key="frame" x="505" y="238" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="recordButtonClicked:" destination="IMY-Yf-Rom" eventType="touchUpInside" id="jPw-DB-gZd"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-bu-nnP">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pz9-po-ooA">
+                                        <rect key="frame" x="0.0" y="0.0" width="510" height="748"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gp0-1P-wdi">
+                                                <rect key="frame" x="0.0" y="0.0" width="510" height="372"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3Y-w8-FdX" customClass="CircleView" customModule="MeetingMaster" customModuleProvider="target">
+                                                        <rect key="frame" x="195" y="126" width="120" height="120"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="PmG-oB-CgD"/>
+                                                            <constraint firstAttribute="width" constant="120" id="ajO-o7-S5o"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kie-TR-hMR" customClass="CircleView" customModule="MeetingMaster" customModuleProvider="target">
+                                                        <rect key="frame" x="215" y="146" width="80" height="80"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="n1W-Rq-v20"/>
+                                                            <constraint firstAttribute="height" constant="80" id="ovb-E9-PZr"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGI-Df-HR8" customClass="CircleView" customModule="MeetingMaster" customModuleProvider="target">
+                                                        <rect key="frame" x="220" y="151" width="70" height="70"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="SiN-M1-FZb"/>
+                                                            <constraint firstAttribute="width" constant="70" id="iDK-hv-g52"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disengangement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWu-56-6Yg">
+                                                        <rect key="frame" x="164" y="10" width="182.5" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="kie-TR-hMR" firstAttribute="centerX" secondItem="Gp0-1P-wdi" secondAttribute="centerX" id="71d-HO-bag"/>
+                                                    <constraint firstItem="GGI-Df-HR8" firstAttribute="leading" secondItem="kie-TR-hMR" secondAttribute="trailing" constant="-75" id="Oaq-MW-Fb4"/>
+                                                    <constraint firstItem="kie-TR-hMR" firstAttribute="centerY" secondItem="Gp0-1P-wdi" secondAttribute="centerY" id="UZJ-uk-6CQ"/>
+                                                    <constraint firstItem="k3Y-w8-FdX" firstAttribute="centerY" secondItem="kie-TR-hMR" secondAttribute="centerY" id="fOk-LG-Uj3"/>
+                                                    <constraint firstItem="GGI-Df-HR8" firstAttribute="centerY" secondItem="kie-TR-hMR" secondAttribute="centerY" id="fnH-l4-YIm"/>
+                                                    <constraint firstItem="xWu-56-6Yg" firstAttribute="top" secondItem="Gp0-1P-wdi" secondAttribute="top" constant="10" id="gr0-79-qV8"/>
+                                                    <constraint firstItem="k3Y-w8-FdX" firstAttribute="leading" secondItem="kie-TR-hMR" secondAttribute="trailing" constant="-100" id="nnE-t5-CzC"/>
+                                                    <constraint firstItem="xWu-56-6Yg" firstAttribute="centerX" secondItem="Gp0-1P-wdi" secondAttribute="centerX" id="uRM-5L-t6z"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMg-KM-gzr">
+                                                <rect key="frame" x="0.0" y="376" width="510" height="372"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-xh-lwt">
+                                        <rect key="frame" x="514" y="0.0" width="510" height="748"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNm-tk-MOL">
+                                                <rect key="frame" x="0.0" y="0.0" width="510" height="372"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eP-Mj-SYj">
+                                                <rect key="frame" x="0.0" y="376" width="510" height="372"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vWA-bu-nnP" secondAttribute="trailing" id="70P-0U-sxn"/>
+                            <constraint firstItem="vWA-bu-nnP" firstAttribute="leading" secondItem="Znb-eN-k5i" secondAttribute="leading" id="HJY-c0-7Ci"/>
+                            <constraint firstItem="vWA-bu-nnP" firstAttribute="top" secondItem="RCQ-k7-Yty" secondAttribute="bottom" id="YBM-wn-sgZ"/>
+                            <constraint firstItem="plt-KO-xs5" firstAttribute="top" secondItem="vWA-bu-nnP" secondAttribute="bottom" id="Zks-4b-Uu3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3U-5R-fAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386" y="-140"/>
+            <point key="canvasLocation" x="385.546875" y="-140.625"/>
         </scene>
     </scenes>
 </document>
