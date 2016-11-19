@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25F6CD7F1DE067CD0072B37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CD7E1DE067CD0072B37C /* AppDelegate.swift */; };
+		25F6CD811DE067CD0072B37C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CD801DE067CD0072B37C /* ViewController.swift */; };
+		25F6CD841DE067CD0072B37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F6CD821DE067CD0072B37C /* Main.storyboard */; };
+		25F6CD861DE067CD0072B37C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F6CD851DE067CD0072B37C /* Assets.xcassets */; };
+		25F6CD891DE067CD0072B37C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F6CD871DE067CD0072B37C /* LaunchScreen.storyboard */; };
+		25F6CDB81DE0687F0072B37C /* MMBaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDA01DE0687F0072B37C /* MMBaseTarget.swift */; };
+		25F6CDBF1DE0687F0072B37C /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDAB1DE0687F0072B37C /* BaseService.swift */; };
+		25F6CDC01DE0687F0072B37C /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDAC1DE0687F0072B37C /* Cancellable.swift */; };
+		25F6CDC11DE0687F0072B37C /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDAD1DE0687F0072B37C /* NetworkingError.swift */; };
+		25F6CDC21DE0687F0072B37C /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDAE1DE0687F0072B37C /* NetworkingProvider.swift */; };
+		25F6CDC31DE0687F0072B37C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDAF1DE0687F0072B37C /* Response.swift */; };
+		25F6CDC41DE0687F0072B37C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDB01DE0687F0072B37C /* Result.swift */; };
+		25F6CDC51DE0687F0072B37C /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDB11DE0687F0072B37C /* TargetType.swift */; };
+		25F6CDC61DE0687F0072B37C /* JourneysService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDB31DE0687F0072B37C /* JourneysService.swift */; };
+		25F6CDCA1DE0687F0072B37C /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDB71DE0687F0072B37C /* Services.swift */; };
+		25F6CDCC1DE069350072B37C /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CDCB1DE069350072B37C /* BackendError.swift */; };
+		FCFD91EE74D173D2DDD22D0F /* Pods_MeetingMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25F6CD7B1DE067CD0072B37C /* MeetingMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F6CD7E1DE067CD0072B37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		25F6CD801DE067CD0072B37C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		25F6CD831DE067CD0072B37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25F6CD851DE067CD0072B37C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25F6CD881DE067CD0072B37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25F6CD8A1DE067CD0072B37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25F6CDA01DE0687F0072B37C /* MMBaseTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBaseTarget.swift; sourceTree = "<group>"; };
+		25F6CDAB1DE0687F0072B37C /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		25F6CDAC1DE0687F0072B37C /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		25F6CDAD1DE0687F0072B37C /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		25F6CDAE1DE0687F0072B37C /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		25F6CDAF1DE0687F0072B37C /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		25F6CDB01DE0687F0072B37C /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		25F6CDB11DE0687F0072B37C /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		25F6CDB31DE0687F0072B37C /* JourneysService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneysService.swift; sourceTree = "<group>"; };
+		25F6CDB71DE0687F0072B37C /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		25F6CDCB1DE069350072B37C /* BackendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
+		36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetingMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6A23D94F2DCE51389128829 /* Pods-MeetingMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetingMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		BAB88CA1BA21481829836BE9 /* Pods-MeetingMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetingMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25F6CD781DE067CD0072B37C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCFD91EE74D173D2DDD22D0F /* Pods_MeetingMaster.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25F6CD721DE067CD0072B37C = {
+			isa = PBXGroup;
+			children = (
+				25F6CD7D1DE067CD0072B37C /* MeetingMaster */,
+				25F6CD7C1DE067CD0072B37C /* Products */,
+				932BB0B436ADCA46C6F8986F /* Pods */,
+				9D40F71CD0E0AF588054D8CD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		25F6CD7C1DE067CD0072B37C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CD7B1DE067CD0072B37C /* MeetingMaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25F6CD7D1DE067CD0072B37C /* MeetingMaster */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CD921DE068380072B37C /* Sources */,
+				25F6CD7E1DE067CD0072B37C /* AppDelegate.swift */,
+				25F6CD801DE067CD0072B37C /* ViewController.swift */,
+				25F6CD821DE067CD0072B37C /* Main.storyboard */,
+				25F6CD851DE067CD0072B37C /* Assets.xcassets */,
+				25F6CD871DE067CD0072B37C /* LaunchScreen.storyboard */,
+				25F6CD8A1DE067CD0072B37C /* Info.plist */,
+			);
+			path = MeetingMaster;
+			sourceTree = "<group>";
+		};
+		25F6CD921DE068380072B37C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CD931DE068440072B37C /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		25F6CD931DE068440072B37C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CD9E1DE0687F0072B37C /* Entities */,
+				25F6CD9F1DE0687F0072B37C /* MMServices */,
+				25F6CDAA1DE0687F0072B37C /* Networking */,
+				25F6CDB21DE0687F0072B37C /* Protocols */,
+				25F6CDB71DE0687F0072B37C /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		25F6CD9E1DE0687F0072B37C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CDCB1DE069350072B37C /* BackendError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		25F6CD9F1DE0687F0072B37C /* MMServices */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CDA01DE0687F0072B37C /* MMBaseTarget.swift */,
+			);
+			path = MMServices;
+			sourceTree = "<group>";
+		};
+		25F6CDAA1DE0687F0072B37C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CDAB1DE0687F0072B37C /* BaseService.swift */,
+				25F6CDAC1DE0687F0072B37C /* Cancellable.swift */,
+				25F6CDAD1DE0687F0072B37C /* NetworkingError.swift */,
+				25F6CDAE1DE0687F0072B37C /* NetworkingProvider.swift */,
+				25F6CDAF1DE0687F0072B37C /* Response.swift */,
+				25F6CDB01DE0687F0072B37C /* Result.swift */,
+				25F6CDB11DE0687F0072B37C /* TargetType.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		25F6CDB21DE0687F0072B37C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				25F6CDB31DE0687F0072B37C /* JourneysService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		932BB0B436ADCA46C6F8986F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6A23D94F2DCE51389128829 /* Pods-MeetingMaster.debug.xcconfig */,
+				BAB88CA1BA21481829836BE9 /* Pods-MeetingMaster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D40F71CD0E0AF588054D8CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25F6CD7A1DE067CD0072B37C /* MeetingMaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25F6CD8D1DE067CD0072B37C /* Build configuration list for PBXNativeTarget "MeetingMaster" */;
+			buildPhases = (
+				A3B1094931C4B295F6399B4F /* [CP] Check Pods Manifest.lock */,
+				25F6CD771DE067CD0072B37C /* Sources */,
+				25F6CD781DE067CD0072B37C /* Frameworks */,
+				25F6CD791DE067CD0072B37C /* Resources */,
+				C6CA60455640A538D7A70B14 /* [CP] Embed Pods Frameworks */,
+				1407E781C3C06E0A050F9C44 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetingMaster;
+			productName = MeetingMaster;
+			productReference = 25F6CD7B1DE067CD0072B37C /* MeetingMaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25F6CD731DE067CD0072B37C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Whats'on";
+				TargetAttributes = {
+					25F6CD7A1DE067CD0072B37C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = QA2F5R9ERY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 25F6CD761DE067CD0072B37C /* Build configuration list for PBXProject "MeetingMaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 25F6CD721DE067CD0072B37C;
+			productRefGroup = 25F6CD7C1DE067CD0072B37C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25F6CD7A1DE067CD0072B37C /* MeetingMaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25F6CD791DE067CD0072B37C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F6CD891DE067CD0072B37C /* LaunchScreen.storyboard in Resources */,
+				25F6CD861DE067CD0072B37C /* Assets.xcassets in Resources */,
+				25F6CD841DE067CD0072B37C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1407E781C3C06E0A050F9C44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3B1094931C4B295F6399B4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CA60455640A538D7A70B14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25F6CD771DE067CD0072B37C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F6CDC21DE0687F0072B37C /* NetworkingProvider.swift in Sources */,
+				25F6CDCC1DE069350072B37C /* BackendError.swift in Sources */,
+				25F6CDB81DE0687F0072B37C /* MMBaseTarget.swift in Sources */,
+				25F6CDC51DE0687F0072B37C /* TargetType.swift in Sources */,
+				25F6CD811DE067CD0072B37C /* ViewController.swift in Sources */,
+				25F6CDC61DE0687F0072B37C /* JourneysService.swift in Sources */,
+				25F6CDC41DE0687F0072B37C /* Result.swift in Sources */,
+				25F6CDCA1DE0687F0072B37C /* Services.swift in Sources */,
+				25F6CDC31DE0687F0072B37C /* Response.swift in Sources */,
+				25F6CDC01DE0687F0072B37C /* Cancellable.swift in Sources */,
+				25F6CD7F1DE067CD0072B37C /* AppDelegate.swift in Sources */,
+				25F6CDBF1DE0687F0072B37C /* BaseService.swift in Sources */,
+				25F6CDC11DE0687F0072B37C /* NetworkingError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		25F6CD821DE067CD0072B37C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25F6CD831DE067CD0072B37C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		25F6CD871DE067CD0072B37C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25F6CD881DE067CD0072B37C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25F6CD8B1DE067CD0072B37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		25F6CD8C1DE067CD0072B37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25F6CD8E1DE067CD0072B37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A23D94F2DCE51389128829 /* Pods-MeetingMaster.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QA2F5R9ERY;
+				INFOPLIST_FILE = MeetingMaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appatnight.whatson.MeetingMaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		25F6CD8F1DE067CD0072B37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAB88CA1BA21481829836BE9 /* Pods-MeetingMaster.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QA2F5R9ERY;
+				INFOPLIST_FILE = MeetingMaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appatnight.whatson.MeetingMaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25F6CD761DE067CD0072B37C /* Build configuration list for PBXProject "MeetingMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25F6CD8B1DE067CD0072B37C /* Debug */,
+				25F6CD8C1DE067CD0072B37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25F6CD8D1DE067CD0072B37C /* Build configuration list for PBXNativeTarget "MeetingMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25F6CD8E1DE067CD0072B37C /* Debug */,
+				25F6CD8F1DE067CD0072B37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25F6CD731DE067CD0072B37C /* Project object */;
+}
