@@ -9,9 +9,15 @@
 import Foundation
 import UIKit
 import AVFoundation
+import SpeechToTextV1
 
 class DuringViewController: UIViewController, AVAudioRecorderDelegate {
 
+
+
+    @IBOutlet var timeBar: UIView!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var timetrailing: NSLayoutConstraint!
 
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var temperatureTraillingConstraint: NSLayoutConstraint!
@@ -23,23 +29,51 @@ class DuringViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet var noiselabel: UILabel!
     @IBOutlet var noiseTraillingConstraint: NSLayoutConstraint!
     
+    @IBOutlet var protocolLabel: UIVerticalAlignLabel!
     @IBOutlet var noiseBar: UIView!
 
-    var audioRecorder: AVAudioRecorder?
-    var audioPlayer: AVAudioPlayer?
+    @IBOutlet var putinView: ParticipantImageView!
+    @IBOutlet var merkelview: ParticipantImageView!
+    var isRecording = false
+
+    let username = "312ac6a4-b8f4-42e2-9783-cb1af9a5238e"
+    let password = "3DkhfEF4ENsq"
+
+    var speechToText: SpeechToText!
 
     var loud = false
 
+    var time: TimeInterval = 60*20
+
     override func viewDidLoad() {
         super.viewDidLoad()
+AVAudioSession.sharedInstance().requestRecordPermission { _ in
+    
+        }
+        merkelview.state = .orange
+        putinView.state = .orange
 
+        protocolLabel.verticalAlignment = .Top
         updateValues()
+        barTick(self)
+        speechToText = SpeechToText(username: username, password: password)
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateValues), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(barTick), userInfo: nil, repeats: true)
     }
 
     @IBAction func cheat(_ sender: Any) {
         loud = !loud
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(showAlert), userInfo: nil, repeats: false)
+    }
+
+    @IBAction func barTick(_ sender: Any) {
+        time -= 1
+        timeLabel.text = time.asStringHHmmss
+        timetrailing.constant += 1
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
     func updateValues() {
@@ -59,7 +93,7 @@ class DuringViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     func showAlert() {
-        let alert = UIAlertController(title: "High noise values!", message: "It is getting really noisy in here. How about taking a break?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Take a break!", message: "It is getting really noisy in here. How about taking a break?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
             self.loud = false
         }))
@@ -68,47 +102,19 @@ class DuringViewController: UIViewController, AVAudioRecorderDelegate {
 
 
     @IBAction func recordButtonClicked(_ sender: UIButton) {
-        let fileMgr = FileManager.default
 
-        let dirPaths = fileMgr.urls(for: .documentDirectory, in: .userDomainMask)
-
-        let soundFileURL = dirPaths[0].appendingPathComponent("sound")
-
-        let recordSettings =
-            [AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue,
-             AVNumberOfChannelsKey: 1,
-             AVFormatIDKey: kAudioFormatLinearPCM,
-             AVSampleRateKey: 12000] as [String : Any]
-
-        let audioSession = AVAudioSession.sharedInstance()
-
-        do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-        } catch let error as NSError {
-            print("audioSession error: \(error.localizedDescription)")
-        }
-
-        do {
-            try audioRecorder = AVAudioRecorder(url: soundFileURL, settings: recordSettings as [String : AnyObject])
-            audioRecorder?.prepareToRecord()
-        } catch let error as NSError {
-            print("audioSession error: \(error.localizedDescription)")
-        }
-        print("Audio record")
-        audioRecorder?.record()
-        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(stopRecording), userInfo: nil, repeats: false)
-    }
-
-    func stopRecording() {
-        audioRecorder?.stop()
-        print("Audio stopped")
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOf: (audioRecorder?.url)!)
-            audioPlayer!.prepareToPlay()
-            audioPlayer!.play()
-            MMBaseService.uploadWav()
-        } catch let error as NSError {
-            print("audioPlayer error: \(error.localizedDescription)")
+        var settings = RecognitionSettings(contentType: .opus)
+        settings.continuous = true
+        settings.interimResults = true
+        let failure = { (error: Error) in print(error) }
+        if !isRecording {
+            isRecording = true
+            speechToText.recognizeMicrophone(settings: settings, failure: failure) { results in
+                self.protocolLabel.text = results.bestTranscript
+            }
+        } else {
+            speechToText.stopRecognizeMicrophone()
+            isRecording = false
         }
     }
 }

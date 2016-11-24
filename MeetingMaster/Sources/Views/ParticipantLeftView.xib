@@ -23,19 +23,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdX-yq-FwK">
-                    <rect key="frame" x="243" y="298.5" width="42" height="21"/>
+                    <rect key="frame" x="243" y="299" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiH-v5-coV">
-                    <rect key="frame" x="247.5" y="322.5" width="37.5" height="18"/>
+                    <rect key="frame" x="247" y="323" width="38" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-3k-sxb" customClass="ParticipantImageView" customModule="MeetingMaster" customModuleProvider="target">
-                    <rect key="frame" x="295" y="293.5" width="80" height="80"/>
+                    <rect key="frame" x="295" y="294" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="Df0-wa-UBF"/>
                         <constraint firstAttribute="width" secondItem="Uxg-3k-sxb" secondAttribute="height" multiplier="1:1" id="SbX-uX-kJu"/>

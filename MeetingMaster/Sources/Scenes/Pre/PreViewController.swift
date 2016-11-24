@@ -49,7 +49,22 @@ class PreViewController: UIViewController {
             participantViews[index].isHidden = false
             participantViews[index].jobLabel.text = participant.job
             participantViews[index].nameLabel.text = participant.name
-            participantViews[index].participantImageView.image = #imageLiteral(resourceName: "trump")
+            switch participant.name {
+            case "Donald Trump":
+                participantViews[index].participantImageView.image = #imageLiteral(resourceName: "5")
+            case "Angela Merkel":
+                    participantViews[index].participantImageView.image = #imageLiteral(resourceName: "2")
+            case "Justin Trudeau":
+                participantViews[index].participantImageView.image = #imageLiteral(resourceName: "1")
+            case "Wladimir Putin":
+                participantViews[index].participantImageView.image = #imageLiteral(resourceName: "3")
+            case "Xi Jinping":
+                participantViews[index].participantImageView.image = #imageLiteral(resourceName: "6")
+            case "Theresa May":
+                participantViews[index].participantImageView.image = #imageLiteral(resourceName: "4")
+            default:
+                break
+            }
             participantViews[index].participantImageView.state = .green
         }
     }
@@ -79,9 +94,25 @@ extension PreViewController: UITableViewDataSource {
         cell.backgroundColor = UIColor.clear
         cell.nameLabel.text = participant.name
         cell.jobTitleLabel.text = participant.job
-        cell.participantImageView.image = UIImage(named: "trump")
+        switch participant.name {
+        case "Donald Trump":
+            cell.participantImageView.image = #imageLiteral(resourceName: "5")
+        case "Angela Merkel":
+            cell.participantImageView.image = #imageLiteral(resourceName: "2")
+        case "Justin Trudeau":
+            cell.participantImageView.image = #imageLiteral(resourceName: "1")
+        case "Wladimir Putin":
+            cell.participantImageView.image = #imageLiteral(resourceName: "3")
+        case "Xi Jinping":
+            cell.participantImageView.image = #imageLiteral(resourceName: "6")
+        case "Theresa May":
+            cell.participantImageView.image = #imageLiteral(resourceName: "4")
+        default:
+            break
+        }
+
         cell.participantImageView.state = participant.status == .accepted ? .orange : .red
-        cell.etaLabel.text = participant.status == .accepted ? String(participant.eta) : ""
+        cell.etaLabel.text = participant.status == .accepted ? participant.eta.asStringHHmmss : ""
 
         return cell
     }

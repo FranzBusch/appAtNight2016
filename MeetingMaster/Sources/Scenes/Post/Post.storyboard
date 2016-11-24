@@ -1,7 +1,134 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bHH-c5-n1a">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tbr-2C-VjH">
+            <objects>
+                <viewController id="bHH-c5-n1a" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sqT-lU-a5j"/>
+                        <viewControllerLayoutGuide type="bottom" id="P0S-Wx-vQd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4ni-5G-cRf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01 Meeting Minutes" translatesAutoresizingMaskIntoConstraints="NO" id="hXo-Ut-f8N">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h83-bt-DaM" customClass="WhiteRoundedCornerButton" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="312" y="680" width="400" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="3I4-uP-Adn"/>
+                                    <constraint firstAttribute="height" constant="65" id="4J5-oS-5PD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Meeting Minutes"/>
+                                <connections>
+                                    <segue destination="EB4-g8-l19" kind="show" id="S5B-MU-vng"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hXo-Ut-f8N" secondAttribute="trailing" id="PR6-Lg-Q4k"/>
+                            <constraint firstItem="P0S-Wx-vQd" firstAttribute="top" secondItem="hXo-Ut-f8N" secondAttribute="bottom" id="Vl5-9Y-pas"/>
+                            <constraint firstItem="h83-bt-DaM" firstAttribute="centerX" secondItem="4ni-5G-cRf" secondAttribute="centerX" id="Xcl-Yn-tHr"/>
+                            <constraint firstItem="P0S-Wx-vQd" firstAttribute="top" secondItem="h83-bt-DaM" secondAttribute="bottom" constant="23" id="lYt-eb-lvQ"/>
+                            <constraint firstItem="hXo-Ut-f8N" firstAttribute="leading" secondItem="4ni-5G-cRf" secondAttribute="leading" id="pEp-ec-zm2"/>
+                            <constraint firstItem="hXo-Ut-f8N" firstAttribute="top" secondItem="4ni-5G-cRf" secondAttribute="top" id="w7l-R0-r13"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yM9-tC-Fz9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFW-Ef-ghq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="17"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LEN-ji-iPU">
+            <objects>
+                <viewController id="EB4-g8-l19" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PHC-iD-XPQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ue4-UB-I2a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Jl-os-TYk">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02 Tasks" translatesAutoresizingMaskIntoConstraints="NO" id="80l-xu-T9J">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-y6-bwT" customClass="WhiteRoundedCornerButton" customModule="MeetingMaster" customModuleProvider="target">
+                                <rect key="frame" x="312" y="680" width="400" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Y2B-32-GyJ"/>
+                                    <constraint firstAttribute="height" constant="65" id="o0m-uf-N2q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Task Assignments"/>
+                                <connections>
+                                    <segue destination="v5B-IO-5Kt" kind="show" id="VL1-Xw-Xzt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="80l-xu-T9J" firstAttribute="leading" secondItem="6Jl-os-TYk" secondAttribute="leading" id="6pJ-DO-QcB"/>
+                            <constraint firstItem="80l-xu-T9J" firstAttribute="top" secondItem="6Jl-os-TYk" secondAttribute="top" id="Wku-Aj-twb"/>
+                            <constraint firstItem="pXt-y6-bwT" firstAttribute="centerX" secondItem="6Jl-os-TYk" secondAttribute="centerX" id="eWs-uJ-EEs"/>
+                            <constraint firstItem="ue4-UB-I2a" firstAttribute="top" secondItem="pXt-y6-bwT" secondAttribute="bottom" constant="23" id="fpz-kA-Lqz"/>
+                            <constraint firstAttribute="trailing" secondItem="80l-xu-T9J" secondAttribute="trailing" id="wZl-rw-yno"/>
+                            <constraint firstItem="ue4-UB-I2a" firstAttribute="top" secondItem="80l-xu-T9J" secondAttribute="bottom" id="ymL-3Q-elI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="agN-yB-kdb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPg-QW-fEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="16"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wEW-sf-6gC">
+            <objects>
+                <viewController id="v5B-IO-5Kt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GLA-VS-o9B"/>
+                        <viewControllerLayoutGuide type="bottom" id="yJD-Qw-QmT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uLe-dU-g8M">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03 Post-Stats" translatesAutoresizingMaskIntoConstraints="NO" id="VhZ-i5-9Ci">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yJD-Qw-QmT" firstAttribute="top" secondItem="VhZ-i5-9Ci" secondAttribute="bottom" id="bj6-ga-2pL"/>
+                            <constraint firstItem="VhZ-i5-9Ci" firstAttribute="leading" secondItem="uLe-dU-g8M" secondAttribute="leading" id="k9r-sx-ktY"/>
+                            <constraint firstItem="VhZ-i5-9Ci" firstAttribute="top" secondItem="uLe-dU-g8M" secondAttribute="top" id="sfE-DD-O6r"/>
+                            <constraint firstAttribute="trailing" secondItem="VhZ-i5-9Ci" secondAttribute="trailing" id="uoR-8L-mF0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VKT-NF-2As" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1518" y="16"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="01 Meeting Minutes" width="1024" height="768"/>
+        <image name="02 Tasks" width="1024" height="768"/>
+        <image name="03 Post-Stats" width="1024" height="768"/>
+    </resources>
 </document>

@@ -65,6 +65,10 @@
 		25F6CE2D1DE0BFC90072B37C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE2C1DE0BFC90072B37C /* GradientView.swift */; };
 		25F6CE2F1DE0C8A80072B37C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE2E1DE0C8A80072B37C /* CircleView.swift */; };
 		25F6CE311DE105210072B37C /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE301DE105210072B37C /* RoundedCornerButton.swift */; };
+		25F6CE341DE1ADA20072B37C /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F6CE321DE1ADA20072B37C /* RestKit.framework */; };
+		25F6CE371DE1ADB70072B37C /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F6CE361DE1ADB70072B37C /* SpeechToTextV1.framework */; };
+		25F6CE3A1DE1B11C0072B37C /* VertialAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE391DE1B11C0072B37C /* VertialAlignedLabel.swift */; };
+		25F6CE3C1DE1C26D0072B37C /* Timeinterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6CE3B1DE1C26D0072B37C /* Timeinterval.swift */; };
 		FCFD91EE74D173D2DDD22D0F /* Pods_MeetingMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +133,11 @@
 		25F6CE2C1DE0BFC90072B37C /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		25F6CE2E1DE0C8A80072B37C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		25F6CE301DE105210072B37C /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		25F6CE321DE1ADA20072B37C /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
+		25F6CE331DE1ADA20072B37C /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextToSpeechV1.framework; path = Carthage/Build/iOS/TextToSpeechV1.framework; sourceTree = "<group>"; };
+		25F6CE361DE1ADB70072B37C /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		25F6CE391DE1B11C0072B37C /* VertialAlignedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertialAlignedLabel.swift; sourceTree = "<group>"; };
+		25F6CE3B1DE1C26D0072B37C /* Timeinterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeinterval.swift; sourceTree = "<group>"; };
 		36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetingMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A23D94F2DCE51389128829 /* Pods-MeetingMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetingMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB88CA1BA21481829836BE9 /* Pods-MeetingMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetingMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F6CE371DE1ADB70072B37C /* SpeechToTextV1.framework in Frameworks */,
+				25F6CE341DE1ADA20072B37C /* RestKit.framework in Frameworks */,
 				FCFD91EE74D173D2DDD22D0F /* Pods_MeetingMaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +305,7 @@
 				25F6CE2C1DE0BFC90072B37C /* GradientView.swift */,
 				25F6CE2E1DE0C8A80072B37C /* CircleView.swift */,
 				25F6CE301DE105210072B37C /* RoundedCornerButton.swift */,
+				25F6CE391DE1B11C0072B37C /* VertialAlignedLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,6 +358,7 @@
 				25F6CE1C1DE08B700072B37C /* EventBus.swift */,
 				25F6CE1E1DE08DDD0072B37C /* MeetingUpdatedEvent.swift */,
 				25F6CE2A1DE0B9C90072B37C /* MeetingBeganEvent.swift */,
+				25F6CE3B1DE1C26D0072B37C /* Timeinterval.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -362,6 +375,9 @@
 		9D40F71CD0E0AF588054D8CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25F6CE361DE1ADB70072B37C /* SpeechToTextV1.framework */,
+				25F6CE321DE1ADA20072B37C /* RestKit.framework */,
+				25F6CE331DE1ADA20072B37C /* TextToSpeechV1.framework */,
 				36D9EFD5C81DCF33754A2570 /* Pods_MeetingMaster.framework */,
 			);
 			name = Frameworks;
@@ -380,6 +396,7 @@
 				25F6CD791DE067CD0072B37C /* Resources */,
 				C6CA60455640A538D7A70B14 /* [CP] Embed Pods Frameworks */,
 				1407E781C3C06E0A050F9C44 /* [CP] Copy Pods Resources */,
+				25F6CE381DE1ADCE0072B37C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -458,6 +475,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetingMaster/Pods-MeetingMaster-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		25F6CE381DE1ADCE0072B37C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SpeechToTextV1.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RestKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		A3B1094931C4B295F6399B4F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,6 +538,7 @@
 				25F6CE041DE06ED30072B37C /* NibDesignable.swift in Sources */,
 				25F6CE021DE06ED30072B37C /* DesignableTableViewHeaderFooterView.swift in Sources */,
 				25F6CE2B1DE0B9C90072B37C /* MeetingBeganEvent.swift in Sources */,
+				25F6CE3A1DE1B11C0072B37C /* VertialAlignedLabel.swift in Sources */,
 				25F6CE091DE06ED30072B37C /* NibDesignableTableViewCell.swift in Sources */,
 				25F6CDC61DE0687F0072B37C /* JourneysService.swift in Sources */,
 				25F6CE011DE06ED30072B37C /* DesignableTableViewCell.swift in Sources */,
@@ -532,6 +565,7 @@
 				25F6CDC01DE0687F0072B37C /* Cancellable.swift in Sources */,
 				25F6CDD21DE06BCF0072B37C /* PreViewController.swift in Sources */,
 				25F6CDFD1DE06ED30072B37C /* DesignableButton.swift in Sources */,
+				25F6CE3C1DE1C26D0072B37C /* Timeinterval.swift in Sources */,
 				25F6CDE91DE06DF70072B37C /* Room.swift in Sources */,
 				25F6CD7F1DE067CD0072B37C /* AppDelegate.swift in Sources */,
 				25F6CE051DE06ED30072B37C /* NibDesignableButton.swift in Sources */,
@@ -662,7 +696,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QA2F5R9ERY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MeetingMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appatnight.whatson.MeetingMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -676,7 +715,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QA2F5R9ERY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MeetingMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appatnight.whatson.MeetingMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
